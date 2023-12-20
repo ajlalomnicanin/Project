@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stos",
+  "info": {
+    "singularName": "sto",
+    "pluralName": "stos",
+    "displayName": "sto "
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "drvo": {
+      "type": "string"
+    }
+  }
+}

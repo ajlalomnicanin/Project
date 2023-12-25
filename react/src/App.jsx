@@ -1,23 +1,31 @@
 import { useEffect, useState } from "react";
-
-import "./App.css";
+import { Button, Container } from "@mui/material";
+import Appbar from "./components/Appbar";
 
 function App() {
-  // const [count, setCount] = useState(0);
-
   useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await fetch("http://localhost:1337/api/products");
-        const data = await response.json();
-
-        console.log(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getData();
-  });
+    document.title = "Home";
+  }, []);
+  return (
+    <Container maxWidth="xl">
+      <Appbar />
+      <Button>Button</Button>
+    </Container>
+  );
 }
 
 export default App;
+
+// useEffect(() => {
+//   const getData = async () => {
+//     try {
+//       const response = await fetch("http://localhost:1337/api/products");
+//       const data = await response.json();
+
+//       console.log(data);
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
+//   getData();
+// });

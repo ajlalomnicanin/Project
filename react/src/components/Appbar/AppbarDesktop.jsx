@@ -1,26 +1,26 @@
 import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
-import { AppbarContainer, AppbarHeader, MyList } from "../../styles/Appbar";
-import Action from "./Action";
+import { AppbarContainer, AppbarHeader, MyList } from "../../styles/appbar";
+import SearchIcon from "@mui/icons-material/Search";
+import Actions from "./Actions";
 
-function AppbarDesktop({ matches }) {
+
+export default function AppbarDesktop({ matches }) {
   return (
     <AppbarContainer>
-      <AppbarHeader>Hey</AppbarHeader>
-      {/* <ListItemButton>
-        <ListItemIcon>
-          <Search />
-        </ListItemIcon>
-      </ListItemButton> */}
+      <AppbarHeader variant="h4">My Bags</AppbarHeader>
       <MyList type="row">
         <ListItemText primary="Home" />
-        <ListItemText primary="Product" />
         <ListItemText primary="Categories" />
+        <ListItemText primary="Products" />
         <ListItemText primary="About us" />
-        <ListItemText primary="Contact" />
+        <ListItemText primary="Contact us" />
+        <ListItemButton>
+          <ListItemIcon>
+            <SearchIcon />
+          </ListItemIcon>
+        </ListItemButton>
       </MyList>
-      <Action />
+      <Actions matches={matches} />
     </AppbarContainer>
   );
 }
-
-export default AppbarDesktop;

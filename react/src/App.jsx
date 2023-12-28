@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Button, Container } from "@mui/material";
 import Appbar from "./components/Appbar/Appbar";
 import AppbarDesktop from "./components/Appbar/AppbarDesktop";
+import Banner from "./components/Banner/Banner";
 
 function App() {
   // const router = createBrowserRouter([
@@ -18,6 +19,7 @@ function App() {
     // <RouterProvider router={router}>
     <Container maxWidth="xl">
       <Appbar />
+      <Banner />
     </Container>
     // </RouterProvider>
   );

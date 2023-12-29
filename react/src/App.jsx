@@ -1,28 +1,38 @@
 import { useEffect, useState } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { Button, Container } from "@mui/material";
 import Appbar from "./components/Appbar/Appbar";
 import AppbarDesktop from "./components/Appbar/AppbarDesktop";
 import Banner from "./components/Banner/Banner";
+import Products from "./page/Products";
+import Categories from "./page/Categories";
+import Home from "./page/Home";
+import MyLayout from "./components/MyLayout/MyLayout";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <MyLayout>
+        <Outlet />
+      </MyLayout>
+    ),
+    children: [
+      { index: true, element: <Home /> },
+      { path: "/product/:id", element: <Products /> },
+      { path: "/categories", element: <Categories /> },
+    ],
+  },
+]);
 
 function App() {
-  // const router = createBrowserRouter([
-  //   {
-  //     path: "/",
-  //     element: <AppbarDesktop />,
-  //   },
-  // ]);
-  useEffect(() => {
-    document.title = "Home";
-  }, []);
-  return (
-    // <RouterProvider router={router}>
-    <Container maxWidth="xl">
-      <Appbar />
-      <Banner />
-    </Container>
-    // </RouterProvider>
-  );
+  // useEffect(() => {
+  //   document.title = "Home";
+  // }, []);
+  return <RouterProvider router={router}
+  >
+    
+  </RouterProvider>;
 }
 
 export default App;

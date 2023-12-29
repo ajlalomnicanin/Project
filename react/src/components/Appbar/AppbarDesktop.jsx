@@ -9,7 +9,7 @@ export default function AppbarDesktop({ matches }) {
     <AppbarContainer>
       <AppbarHeader variant="h4">My Bags</AppbarHeader>
       <MyList type="row">
-        <ListItemText primary="Home" />
+        <ListItemText primary="Home" onCl />
         <ListItemText primary="Categories" />
         <ListItemText primary="Products" />
         <ListItemText primary="About us" />

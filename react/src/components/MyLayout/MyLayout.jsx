@@ -3,11 +3,6 @@ import Appbar from "../Appbar/Appbar";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function MyLayout({ children }) {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  // const isCategoriesPage = location.pathname === paths.landing;
-  // const isProductsPage = location.pathname === paths.group;
 
   return (
     <Container maxWidth="xl">

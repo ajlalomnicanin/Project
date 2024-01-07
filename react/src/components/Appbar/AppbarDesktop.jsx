@@ -16,7 +16,6 @@ export default function AppbarDesktop({ matches }) {
     <AppbarContainer>
       <AppbarHeader variant="h4">My Bags</AppbarHeader>
       <MyList type="row">
-        {" "}
         <ListItemText
           primary="Home"
           onClick={() => {

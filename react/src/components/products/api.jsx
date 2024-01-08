@@ -1,4 +1,4 @@
-export const products = [
+export const products1 = [
   {
     id: 1,
     name: "Elegant Sofa",
@@ -35,3 +35,4 @@ export const products = [
     image: "chair.jpg",
   },
 ];
+console.log(products1);

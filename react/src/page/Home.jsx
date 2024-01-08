@@ -1,6 +1,6 @@
-import Banner from "../components/Banner/Banner";
-import Products from "../components/products";
 import Promotions from "../components/promotions";
+import Products from "../components/products/index";
+import Banner from "../components/banner/Banner";
 
 function Home() {
   return (
@@ -8,7 +8,9 @@ function Home() {
       <h1>home</h1>
       <Banner />
       <Promotions />
-      <Products/>
+      <h1>fredc</h1>
+      <Products />
+      <h1>he</h1>
     </div>
   );
 }

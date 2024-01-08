@@ -1,21 +1,26 @@
 import { useTheme } from "@mui/material/styles";
 import { Container, Grid, useMediaQuery } from "@mui/material";
-import { products } from "./api";
-import { margin } from "polished";
+import { products1 } from "./api";
+import SingleProducts from "./SingleProducts";
 
 function Products() {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
 
-  const renderProducts = products.map((product) => {
-    <Grid
-      item
-      key={product.id}
-      display="flex"
-      flexDirection={"column"}
-      alignItems={"center"}
-    ></Grid>;
+  const renderProducts = products1?.map((product) => {
+    return (
+      <Grid
+        item
+        key={product.id}
+        display="flex"
+        flexDirection={"column"}
+        alignItems={"center"}
+      >
+        <SingleProducts product={product} matches={matches} />
+      </Grid>
+    );
   });
+  console.log(renderProducts);
   return (
     <Container>
       <Grid

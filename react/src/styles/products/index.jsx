@@ -1,15 +1,15 @@
 import styled from "@emotion/styled";
-import { Box } from "@mui/material";
+import { Box, Button, IconButton } from "@mui/material";
 import { Colors } from "../../theme/Theme";
 
-export const Product = styled(Box)(({ theme }) => ({
+export const Product = styled(Box)(({ src, theme }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
-  [theme.breakpoints.up("md")]: {
-    position: "relative",
-  },
+  // [theme.breakpoints.up("md")]: {
+  //   position: "relative",
+  // },
 }));
 
 export const ProductImage = styled("img")(({ src, theme }) => ({
@@ -17,10 +17,10 @@ export const ProductImage = styled("img")(({ src, theme }) => ({
   width: "100%",
   background: Colors.light_gray,
   padding: "10px",
-  [theme.breakpoints.down("md")]: {
-    width: "80%",
-    padding: "24px",
-  },
+  // [theme.breakpoints.down("md")]: {
+  //   width: "80%",
+  //   padding: "24px",
+  // },
 }));
 
 export const ProductActionButton = styled(IconButton)(() => ({

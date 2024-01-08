@@ -14,7 +14,7 @@ function Banner() {
 
   return (
     <BannerContainer>
-      <BannerImage src="" />
+      <BannerImage src="." />
       <BannerContent>
         <Typography variant="h6">New Collection</Typography>
         <BannerTitle variant="h2">Avene</BannerTitle>

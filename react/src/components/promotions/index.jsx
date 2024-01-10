@@ -1,6 +1,7 @@
 import { Box, Slide } from "@mui/material";
-import { MessageText, PromotionsContainer } from "../../styles/promotions";
+// import { MessageText, PromotionsContainer } from "../promotions";
 import { useEffect, useRef, useState } from "react";
+import { MessageText, PromotionsContainer } from "../../promotions";
 
 const messages = [
   "20% off on your first order!",

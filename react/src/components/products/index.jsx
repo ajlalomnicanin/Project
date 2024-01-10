@@ -12,6 +12,9 @@ function Products() {
       <Grid
         item
         key={product.id}
+        // xs={2}
+        // sm={4}
+        md={4}
         display="flex"
         flexDirection={"column"}
         alignItems={"center"}
@@ -25,8 +28,10 @@ function Products() {
     <Container>
       <Grid
         container
+        spacing={{ xs: 3, md: 6 }}
         justifyContent={"center"}
         sx={{ margin: "20px 4px 10px 4px" }}
+        columns={{ sx: 4, sm: 8, md: 12 }}
       >
         {renderProducts}
       </Grid>

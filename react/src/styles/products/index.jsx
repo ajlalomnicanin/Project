@@ -1,8 +1,10 @@
 import styled from "@emotion/styled";
-import { Box, Button, IconButton } from "@mui/material";
-import { Colors } from "../../theme/Theme";
+import { Button, IconButton } from "@mui/material";
+import { Box } from "@mui/system";
+import { slideInBottom, slideInRight } from "../../animation";
+import Theme, { Colors } from "../../theme/Theme";
 
-export const Product = styled(Box)(({ src, theme }) => ({
+export const Product = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -28,31 +30,31 @@ export const ProductActionButton = styled(IconButton)(() => ({
   margin: 4,
 }));
 
-export const ProductFavButton = styled(ProductActionButton)(
-  ({ isfav, theme }) => ({
-    color: isfav ? Colors.primary : Colors.light,
-    [theme.breakpoints.up("md")]: {
-      position: "absolute",
-      right: 0,
-      top: 0,
-    },
-  })
-);
+export const ProductFavButton = styled(ProductActionButton, {
+  shouldForwardProp: (prop) => prop !== "isfav",
+})(({ isfav, theme }) => ({
+  color: isfav ? Colors.primary : Colors.light,
+  // [theme.breakpoints.up("md")]: {
+  //   position: "absolute",
+  //   right: 0,
+  //   top: 0,
+  // },
+}));
 
 export const ProductAddToCart = styled(Button, {
   shouldForwardProp: (prop) => prop !== "show",
 })(({ show, theme }) => ({
   width: "120px",
   fontSize: "12px",
-  [theme.breakpoints.up("md")]: {
-    position: "absolute",
-    bottom: "2%",
-    width: "300px",
-    padding: "10px 5px",
-    animation:
-      show &&
-      `${slideInBottom} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both`,
-  },
+  // [theme.breakpoints.up("md")]: {
+  //   position: "absolute",
+  //   bottom: "2%",
+  //   width: "300px",
+  //   padding: "10px 5px",
+  animation:
+    show &&
+    `${slideInBottom} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both`,
+  // },
   background: Colors.secondary,
   opacity: 0.9,
 }));
@@ -65,13 +67,13 @@ export const ProductMetaWrapper = styled(Box)(({ theme }) => ({
 }));
 
 export const ProductActionsWrapper = styled(Box)(({ show, theme }) => ({
-  [theme.breakpoints.up("md")]: {
-    display: show ? "visible" : "none",
-    position: "absolute",
-    right: 0,
-    top: "20%",
-    animation:
-      show &&
-      `${slideInRight} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both`,
-  },
+  // [theme.breakpoints.up("md")]: {
+  //   display: show ? "visible" : "none",
+  //   position: "absolute",
+  //   right: 0,
+  //   top: "20%",
+  animation:
+    show &&
+    `${slideInRight} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both`,
+  // },
 }));

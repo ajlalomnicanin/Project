@@ -17,14 +17,16 @@ export default function Actions({ matches }) {
         alignItems: "center",
         position: matches ? "fixed" : "relative",
         bottom: matches ? 0 : "unset",
+        width: matches ? "80%" : "10px",
       }}
     >
+      <Divider orientation="vertical" flexItem />
       <ListItemButton>
         <ListItemIcon
           sx={{
             display: "flex",
             justifyContent: "center",
-            color: matches ? theme.palette.secondary.main : undefined,
+            color: matches ? theme.palette.primary.main : undefined,
           }}
         >
           <ShoppingCartIcon />
@@ -36,7 +38,7 @@ export default function Actions({ matches }) {
           sx={{
             display: "flex",
             justifyContent: "center",
-            color: matches ? theme.palette.secondary.main : undefined,
+            color: matches ? theme.palette.primary.main : undefined,
           }}
         >
           <FavoriteIcon />
@@ -48,7 +50,7 @@ export default function Actions({ matches }) {
           sx={{
             display: "flex",
             justifyContent: "center",
-            color: matches ? theme.palette.secondary.main : undefined,
+            color: matches ? theme.palette.primary.main : undefined,
           }}
         >
           <PersonIcon />

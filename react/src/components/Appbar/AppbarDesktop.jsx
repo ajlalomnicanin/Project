@@ -14,7 +14,7 @@ export default function AppbarDesktop({ matches }) {
   // Active state
   return (
     <AppbarContainer>
-      <AppbarHeader variant="h4">My Bags</AppbarHeader>
+      <AppbarHeader variant="h4">EleganceHome</AppbarHeader>
       <MyList type="row">
         <ListItemText
           primary="Home"

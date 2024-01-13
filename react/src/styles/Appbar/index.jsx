@@ -3,6 +3,7 @@ import { styled } from "@mui/material/styles";
 import { Box } from "@mui/system";
 // import "@fontsource/montez";
 import { Colors } from "../../theme/Theme";
+import { textPopUpTop } from "../../animation";
 
 // import { textPopUpTop } from "../../animation";
 
@@ -12,29 +13,26 @@ export const AppbarContainer = styled(Box)(() => ({
   justifyContent: "center",
   alignItems: "center",
   padding: "2px 8px",
+  background: Colors.white_y,
 }));
 
 export const AppbarHeader = styled(Typography)(() => ({
   padding: "4px",
   flexGrow: 1,
-  fontSize: "4em",
+  fontSize: "3em",
   fontFamily: '"Montez", "cursive"',
-  // color: Colors.secondary,
-  // "&:hover": {
-  //   animation: `${textPopUpTop} 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both`,
-  // },
+  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.9)", // Prilagodi vrednosti prema potrebama
+  color: Colors.secondary,
+  "&:hover": {
+    animation: `${textPopUpTop} 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both`,
+  },
 }));
 
 export const ActionIconsContainerMobile = styled(Box)(() => ({
   display: "flex",
-  background: Colors.shaft,
   position: "fixed",
-  bottom: 0,
-  left: 0,
-  width: "100%",
   alignItems: "center",
-  zIndex: 99,
-  borderTop: `1px solid ${Colors.border}`,
+  zIndex: 2,
 }));
 
 export const ActionIconsContainerDesktop = styled(Box)(() => ({
@@ -48,9 +46,9 @@ export const MyList = styled(List)(({ type }) => ({
   alignItems: "center",
 }));
 
-export const DrawerCloseButton = styled(IconButton)(() => ({
-  position: "absolute",
-  top: 10,
-  left: DrawerWidth,
-  zIndex: 1999,
-}));
+// export const DrawerCloseButton = styled(IconButton)(() => ({
+//   position: "absolute",
+//   top: 10,
+//   left: DrawerWidth,
+//   zIndex: 1999,
+// }));

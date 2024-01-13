@@ -11,8 +11,8 @@ export default function AppbarMobile({ matches }) {
       <IconButton>
         <MenuIcon />
       </IconButton>
-      <AppbarHeader textAlign={"center"} variant="h4">
-        My Bags
+      <AppbarHeader textAlign={"center"} variant="h7">
+        EleganceHome
       </AppbarHeader>
       <IconButton>
         <SearchIcon />

@@ -1,11 +1,10 @@
 import { Box, Slide } from "@mui/material";
-// import { MessageText, PromotionsContainer } from "../promotions";
 import { useEffect, useRef, useState } from "react";
 import { MessageText, PromotionsContainer } from "../../promotions";
 
 const messages = [
-  "20% off on your first order!",
-  "Summer sale starts now, visit any store.",
+  "Unlock savings: 20% off awaits your initial order!",
+  " Discover exclusive deals with your first purchase!",
 ];
 
 function Promotions() {

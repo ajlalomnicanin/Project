@@ -7,7 +7,9 @@ import Banner from "./components/Banner/Banner";
 import Products from "./page/Products";
 import Categories from "./page/Categories";
 import Home from "./page/Home";
-import MyLayout from "./components/MyLayout/MyLayout";
+import MyLayout from "./components/myLayout/MyLayout";
+import AboutUs from "./page/AboutUs";
+import ContactUs from "./page/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -19,16 +21,16 @@ const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <Home /> },
-      { path: "/product/:id", element: <Products /> },
+      { path: "/products/:id", element: <Products /> },
       { path: "/categories", element: <Categories /> },
+      { path: "/AboutUs", element: <AboutUs /> },
+      { path: "/ContactUs", element: <ContactUs/> },
     ],
   },
 ]);
 
 function App() {
-  // useEffect(() => {
-  //   document.title = "Home";
-  // }, []);
+
   return <RouterProvider router={router} />;
 }
 

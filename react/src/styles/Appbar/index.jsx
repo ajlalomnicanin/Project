@@ -7,13 +7,16 @@ import { textPopUpTop } from "../../animation";
 
 // import { textPopUpTop } from "../../animation";
 
-export const AppbarContainer = styled(Box)(() => ({
+export const AppbarContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   marginTop: 4,
   justifyContent: "center",
   alignItems: "center",
   padding: "2px 8px",
   background: Colors.white_y,
+  "& .active": {
+    textShadow: `1px 1px 2px ${theme.palette.primary.dark}`, // Efekat senke teksta za aktivnu stavku
+  },
 }));
 
 export const AppbarHeader = styled(Typography)(() => ({

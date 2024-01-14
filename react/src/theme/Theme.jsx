@@ -23,7 +23,6 @@ export const Colors = {
   white: "#fff",
   black: "#000",
 };
-
 const Theme = createTheme({
   palette: {
     primary: {

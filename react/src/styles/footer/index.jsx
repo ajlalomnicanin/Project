@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { TextField, Typography } from "@mui/material";
-import { Colors } from "../../theme/Theme";
+
 
 export const FooterTitle = styled(Typography)(() => ({
   textTransform: "uppercase",

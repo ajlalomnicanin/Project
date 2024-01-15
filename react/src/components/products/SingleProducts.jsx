@@ -3,7 +3,7 @@ import {
   Product,
   ProductActionButton,
   ProductActionsWrapper,
-  ProductAddToCart,
+
   ProductFavButton,
   ProductImage,
 } from "../../styles/products";
@@ -32,7 +32,7 @@ function SingleProducts({ product, matches }) {
           </Stack>
         </ProductActionsWrapper>
       </Product>
-      <ProductAddToCart variant="container">Add to card</ProductAddToCart>
+      {/* <ProductAddToCart variant="container">Add to card</ProductAddToCart> */}
     </>
   );
 }

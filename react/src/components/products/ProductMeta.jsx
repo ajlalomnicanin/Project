@@ -12,6 +12,5 @@ export default function ProductMeta({ product, matches }) {
         ${product.price}
       </Typography>
     </ProductMetaWrapper>
-    
   );
 }

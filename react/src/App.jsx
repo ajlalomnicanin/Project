@@ -8,6 +8,7 @@ import MyLayout from "./components/myLayout/MyLayout";
 import AboutUs from "./page/AboutUs";
 import ContactUs from "./page/ContactUs";
 import store from "./store";
+//useParams
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <Home /> },
-      { path: "/products/:id", element: <Products /> },
+      { path: "/Products/", element: <Products /> },
       { path: "/categories", element: <Categories /> },
       { path: "/AboutUs", element: <AboutUs /> },
       { path: "/ContactUs", element: <ContactUs /> },

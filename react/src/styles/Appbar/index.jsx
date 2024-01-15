@@ -49,9 +49,9 @@ export const MyList = styled(List)(({ type }) => ({
   alignItems: "center",
 }));
 
-// export const DrawerCloseButton = styled(IconButton)(() => ({
-//   position: "absolute",
-//   top: 10,
-//   left: DrawerWidth,
-//   zIndex: 1999,
-// }));
+export const DrawerCloseButton = styled(IconButton)(() => ({
+  position: "absolute",
+  top: 10,
+  left: DrawerWidth,
+  zIndex: 1999,
+}));

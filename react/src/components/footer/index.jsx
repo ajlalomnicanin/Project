@@ -107,6 +107,7 @@ export default function Footer() {
               startIcon={<SendIcon sx={{ color: Colors.white }} />}
               sx={{ mt: 4, mb: 4 }}
               variant="contained"
+              style={{ background: "#013a63" }}
             >
               Subscribe
             </Button>

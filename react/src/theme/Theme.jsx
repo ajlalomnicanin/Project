@@ -56,7 +56,6 @@ const Theme = createTheme({
     MuiDrawer: {
       styleOverrides: {
         paper: {
-          width: DrawerWidth,
           background: Colors.primary,
           color: Colors.secondary,
           borderRadius: "0px 100px 0px 0px",

@@ -8,6 +8,7 @@ import MyLayout from "./components/myLayout/MyLayout";
 import AboutUs from "./page/AboutUs";
 import ContactUs from "./page/ContactUs";
 import store from "./store";
+import { UIProvider } from "./context/ui";
 //useParams
 
 const router = createBrowserRouter([
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <Home /> },
-      { path: "/Products/", element: <Products /> },
+      { path: "/Products/:id", element: <Products /> },
       { path: "/categories", element: <Categories /> },
       { path: "/AboutUs", element: <AboutUs /> },
       { path: "/ContactUs", element: <ContactUs /> },
@@ -31,7 +32,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <UIProvider>
+        <RouterProvider router={router} />
+      </UIProvider>
     </Provider>
   );
 }

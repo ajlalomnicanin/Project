@@ -52,6 +52,6 @@ export const MyList = styled(List)(({ type }) => ({
 export const DrawerCloseButton = styled(IconButton)(() => ({
   position: "absolute",
   top: 10,
-  left: DrawerWidth,
+
   zIndex: 1999,
 }));

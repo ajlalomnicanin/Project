@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { eCommerceApi } from "../../api";
+import { ecommerceApi } from "../../api";
 import MediaCard from "./NewFile";
 import { Container, Grid } from "@mui/material";
 
@@ -9,7 +9,7 @@ const Products = () => {
   useEffect(() => {
     const fetchApi = async () => {
       try {
-        const response = await eCommerceApi.get("/api/products?populate=*");
+        const response = await ecommerceApi.get("/api/products?populate=*");
         setProduct(response.data.data);
       } catch (error) {
         console.log(error);

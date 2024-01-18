@@ -2,12 +2,12 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { ecommerceApi } from "../api"; // Assuming you have axios for making HTTP requests
 
 // Async thunk for fetching ecommerce data
-export const fetchBestseller = createAsyncThunk(
-  "ecommerce/fetchBestseller",
+export const fetchBathroom = createAsyncThunk(
+  "ecommerce/fetchBathroom",
   async () => {
     try {
       const response = await ecommerceApi.get(
-        "api/products?populate=categories,image&filters[categories][slug][$eq]=bestseller"
+        "api/products?populate=categories,image&filters[categories][slug][$eq]=bathroom"
       );
       return response.data;
     } catch (error) {
@@ -15,12 +15,12 @@ export const fetchBestseller = createAsyncThunk(
     }
   }
 );
-export const fetchNewProducts = createAsyncThunk(
-  "ecommerce/fetchNewProducts",
+export const fetchBedroom = createAsyncThunk(
+  "ecommerce/fetchBedroom",
   async () => {
     try {
       const response = await ecommerceApi.get(
-        "api/products?populate=categories,image&filters[categories][slug][$eq]=back"
+        "api/products?populate=categories,image&filters[categories][slug][$eq]=bedroom"
       );
       return response.data;
     } catch (error) {
@@ -28,22 +28,12 @@ export const fetchNewProducts = createAsyncThunk(
     }
   }
 );
-export const fetchDrons = createAsyncThunk("ecommerce/fetchDrons", async () => {
-  try {
-    const response = await ecommerceApi.get(
-      "api/products?populate=categories,image&filters[categories][slug][$eq]=dronovi"
-    );
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
-});
-export const fetchCameras = createAsyncThunk(
-  "ecommerce/fetchCameras",
+export const fetchLivingroom = createAsyncThunk(
+  "ecommerce/fetchLivingroom",
   async () => {
     try {
       const response = await ecommerceApi.get(
-        "api/products?populate=categories,image&filters[categories][slug][$eq]=cameras"
+        "api/products?populate=categories,image&filters[categories][slug][$eq]=livingroom"
       );
       return response.data;
     } catch (error) {
@@ -51,12 +41,12 @@ export const fetchCameras = createAsyncThunk(
     }
   }
 );
-export const fetchAcessories = createAsyncThunk(
-  "ecommerce/fetchAcessories",
+export const fetchKitchen = createAsyncThunk(
+  "ecommerce/fetchKitchen",
   async () => {
     try {
       const response = await ecommerceApi.get(
-        "api/products?populate=categories,image&filters[categories][slug][$eq]=acessories"
+        "api/products?populate=categories,image&filters[categories][slug][$eq]=kitchen"
       );
       return response.data;
     } catch (error) {
@@ -69,11 +59,10 @@ const ecommerceSlice = createSlice({
   name: "ecommerce",
   initialState: {
     data: [],
-    bestseller: [],
-    back: [],
-    dronovi: [],
-    cameras: [],
-    acessories: [],
+    bathroom: [],
+    bedroom: [],
+    livingroom: [],
+    kitchen: [],
     status: "idle",
     error: null,
   },
@@ -82,58 +71,47 @@ const ecommerceSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchBestseller.pending, (state) => {
+      .addCase(fetchBathroom.pending, (state) => {
         state.status = "loading";
       })
-      .addCase(fetchBestseller.fulfilled, (state, action) => {
+      .addCase(fetchBathroom.fulfilled, (state, action) => {
         state.status = "succeeded";
-        state.bestseller = action.payload;
+        state.bathroom = action.payload;
       })
-      .addCase(fetchBestseller.rejected, (state, action) => {
+      .addCase(fetchBathroom.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message;
       })
-      .addCase(fetchNewProducts.pending, (state) => {
+      .addCase(fetchBedroom.pending, (state) => {
         state.status = "loading";
       })
-      .addCase(fetchNewProducts.fulfilled, (state, action) => {
+      .addCase(fetchBedroom.fulfilled, (state, action) => {
         state.status = "succeeded";
-        state.back = action.payload;
+        state.bedroom = action.payload;
       })
-      .addCase(fetchNewProducts.rejected, (state, action) => {
+      .addCase(fetchBedroom.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message;
       })
-      .addCase(fetchDrons.pending, (state) => {
+      .addCase(fetchLivingroom.pending, (state) => {
         state.status = "loading";
       })
-      .addCase(fetchDrons.fulfilled, (state, action) => {
+      .addCase(fetchLivingroom.fulfilled, (state, action) => {
         state.status = "succeeded";
-        state.dronovi = action.payload;
+        state.livingroom = action.payload;
       })
-      .addCase(fetchDrons.rejected, (state, action) => {
+      .addCase(fetchLivingroom.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message;
       })
-      .addCase(fetchCameras.pending, (state) => {
+      .addCase(fetchKitchen.pending, (state) => {
         state.status = "loading";
       })
-      .addCase(fetchCameras.fulfilled, (state, action) => {
+      .addCase(fetchKitchen.fulfilled, (state, action) => {
         state.status = "succeeded";
-        state.cameras = action.payload;
+        state.kitchen = action.payload;
       })
-      .addCase(fetchCameras.rejected, (state, action) => {
-        state.status = "failed";
-        state.error = action.error.message;
-      })
-      .addCase(fetchAcessories.pending, (state) => {
-        state.status = "loading";
-      })
-      .addCase(fetchAcessories.fulfilled, (state, action) => {
-        state.status = "succeeded";
-        state.acessories = action.payload;
-      })
-      .addCase(fetchAcessories.rejected, (state, action) => {
+      .addCase(fetchKitchen.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message;
       });

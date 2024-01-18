@@ -5,6 +5,7 @@ import { slideInRight } from "../../animation";
 import Theme, { Colors } from "../../theme/Theme";
 
 export const Product = styled(Box)(({ theme }) => ({
+  marginTop: "30px",
   background: Colors.white_y,
   display: "flex",
   justifyContent: "center",

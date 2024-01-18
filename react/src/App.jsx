@@ -9,6 +9,7 @@ import AboutUs from "./page/AboutUs";
 import ContactUs from "./page/ContactUs";
 import store from "./store";
 import { UIProvider } from "./context/ui";
+import SearchPage from "./page/Searchpage";
 //useParams
 
 const router = createBrowserRouter([
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: "/categories", element: <Categories /> },
       { path: "/AboutUs", element: <AboutUs /> },
       { path: "/ContactUs", element: <ContactUs /> },
+      { path: "/Search/:q", element: <SearchPage /> },
     ],
   },
 ]);

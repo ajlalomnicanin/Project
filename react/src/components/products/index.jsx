@@ -3,9 +3,8 @@ import { ecommerceApi } from "../../api";
 import MediaCard from "./NewFile";
 import { Container, Grid } from "@mui/material";
 
-const Products = () => {
+const Products = ({ data }) => {
   const [product, setProduct] = useState("");
-
   useEffect(() => {
     const fetchApi = async () => {
       try {
@@ -29,6 +28,7 @@ const Products = () => {
             product.map((item) => (
               <Grid item key={item.id} sx={12} sm={8} md={6}>
                 <MediaCard
+                  id={item.id}
                   title={item.attributes.title}
                   text={item.attributes.description}
                   price={item.attributes.price}

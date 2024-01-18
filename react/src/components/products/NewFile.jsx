@@ -16,21 +16,19 @@ import {
 } from "../../styles/products";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useNavigate, useParams } from "react-router-dom";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import products from "../../slices/products";
 
-export default function MediaCard({ text, img, price, title }) {
+export default function MediaCard({ text, img, price, title, id }) {
   // const { id } = useParams();
-  // const [modalIsOpen, setModalIsOpen] = useState(id);
-  // const navigate = useNavigate();
-  // const dispatch = useDispatch();
-  // const openModal = () => {
-  //   setModalIsOpen(true);
-  // };
+  const navigate = useNavigate();
 
   return (
-    <Container style={{ p: "20px", marginBottom: "40px" }}>
+    <Container
+      style={{
+        p: "20px",
+        marginBottom: "40px",
+      }}
+      onClick={() => navigate(`/products/${id}`)}
+    >
       <Product>
         <ProductImage src={img} />
         <CardContent>

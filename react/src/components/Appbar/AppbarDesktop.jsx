@@ -3,11 +3,10 @@ import {
   ListItemIcon,
   ListItemText,
   TextField,
-  appBarClasses,
 } from "@mui/material";
 import { AppbarContainer, AppbarHeader, MyList } from "../../styles/appbar";
 import SearchIcon from "@mui/icons-material/Search";
-import Actions from "./Actions";
+
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { searchProducts } from "../../slices/search";
 import { useEffect, useState } from "react";
@@ -79,7 +78,6 @@ export default function AppbarDesktop({ matches }) {
           />
         </ListItemButton>
       </MyList>
-      <Actions matches={matches} />
     </AppbarContainer>
   );
 }

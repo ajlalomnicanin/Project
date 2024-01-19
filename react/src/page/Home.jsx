@@ -1,4 +1,3 @@
-// import { useToken } from "../theme/Theme";
 import Promotions from "../components/promotions";
 import Banner from "../components/banner/Banner";
 import {
@@ -12,7 +11,6 @@ import {
 import Products from "../components//products/index";
 import Footer from "../components/footer";
 import AppDrawer from "../components/drawer";
-import { UIProvider } from "../context/ui";
 import Theme from "../theme/Theme";
 
 function Home() {

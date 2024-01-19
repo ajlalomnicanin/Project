@@ -19,12 +19,6 @@ function SearchPage() {
   }, [params.q, dispatch]);
 
   return (
-    // <div>
-    //   {list &&
-    //     list.map((item, index) => {
-    //       return <p key={index}>{item.attributes.title}</p>;
-    //     })}
-    // </div>
     <Container>
       <Grid container spacing={4}>
         {list &&

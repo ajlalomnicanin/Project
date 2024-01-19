@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { Button, Container, Grid } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import { fetchProduct } from "../slices/products";
 import MediaCard from "../components/products/NewFile";
 
@@ -25,7 +25,6 @@ const Products = () => {
       <Grid container spacing={4}>
         <Grid item key={productState.id} sx={12} sm={8} md={6}>
           <MediaCard
-            // onClick={() => productState.id}
             id={productState.id}
             title={productState?.product?.data?.attributes?.title}
             text={productState?.product?.data?.attributes.description}

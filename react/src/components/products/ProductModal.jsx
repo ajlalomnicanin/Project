@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
-import { Typography, Button } from "@mui/material";
+import { Typography } from "@mui/material";
 
 const ProductModal = ({ isOpen, onRequestClose, text, price }) => {
   return (
@@ -12,8 +12,6 @@ const ProductModal = ({ isOpen, onRequestClose, text, price }) => {
       <Typography variant="h5">Detalji proizvoda</Typography>
       <Typography>{`Opis: ${text}`}</Typography>
       <Typography>{`Cena: € ${price}`}</Typography>
-      {/* Dodajte ostale informacije koje želite prikazati */}
-      <Button onClick={onRequestClose}>Zatvori</Button>
     </Modal>
   );
 };

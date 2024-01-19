@@ -15,10 +15,10 @@ import {
   ProductTitle,
 } from "../../styles/products";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
-export default function MediaCard({ text, img, price, title, id }) {
-  // const { id } = useParams();
+export default function MediaCard({ text, img, price, title, id, matches }) {
   const navigate = useNavigate();
 
   return (
@@ -45,6 +45,17 @@ export default function MediaCard({ text, img, price, title, id }) {
               }}
             >
               <ShoppingCartIcon />
+            </ListItemIcon>
+          </ListItemButton>
+          <ListItemButton>
+            <ListItemIcon
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                color: matches ? theme.palette.primary.main : undefined,
+              }}
+            >
+              <FavoriteIcon />
             </ListItemIcon>
           </ListItemButton>
         </CardActions>

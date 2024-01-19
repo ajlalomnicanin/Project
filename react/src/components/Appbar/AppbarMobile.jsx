@@ -1,5 +1,4 @@
 import MenuIcon from "@mui/icons-material/Menu";
-
 import SearchIcon from "@mui/icons-material/Search";
 import {
   IconButton,
@@ -8,9 +7,9 @@ import {
   TextField,
 } from "@mui/material";
 import { AppbarContainer, AppbarHeader } from "../../styles/appbar";
-import Actions from "./Actions";
+
 import { useUIContext } from "../../context/ui";
-import AppbarDesktop from "./AppbarDesktop";
+
 
 export default function AppbarMobile({ matches }) {
   const { setDrawerOpen, setShowSearchBox } = useUIContext();
@@ -29,7 +28,6 @@ export default function AppbarMobile({ matches }) {
           </ListItemIcon>
         </ListItemButton>
       </IconButton>
-      <Actions matches={matches} />
     </AppbarContainer>
   );
 }

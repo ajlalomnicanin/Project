@@ -26,27 +26,19 @@ function Categories() {
   }, []);
   return (
     <>
-      <Typography className="naslovi" variant="h2">
-        Bathroom
-      </Typography>
+      <Typography variant="h2">Bathroom</Typography>
       <div>
         <Products data={Bathroom?.data} />
       </div>
-      <Typography className="naslovi" variant="h2">
-        Bedroom
-      </Typography>
+      <Typography variant="h2">Bedroom</Typography>
       <div>
         <Products data={Bedroom?.data} />
       </div>
-      <Typography className="naslovi" variant="h2">
-        Living room
-      </Typography>
+      <Typography variant="h2">Living room</Typography>
       <div>
         <Products data={Livingroom?.data} />
       </div>
-      <Typography className="naslovi" variant="h2">
-        Kitchen
-      </Typography>
+      <Typography variant="h2">Kitchen</Typography>
       <div>
         <Products data={Kitchen?.data} />
       </div>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import Products from "./page/Products";

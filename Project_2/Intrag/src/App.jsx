@@ -14,6 +14,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "/about", element: <About /> },
+      { path: "*", element: <div>404</div> },
       // { path: true, element: <div>Home</div> },
     ],
   },
@@ -22,7 +23,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <RouterProvider router={router}>
-      /* <h1>React Router DOM v6 Demo</h1> */
+      <MyLayout>
+        <Outlet />
+      </MyLayout>
     </RouterProvider>
   );
 }

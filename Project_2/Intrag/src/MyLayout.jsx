@@ -1,7 +1,9 @@
+import { Navbar } from "./page/Navbar";
+
 function MyLayout({ children }) {
   return (
     <>
-      {/* navbar */}
+      <Navbar />
       {children}
       {/* footer */}
     </>
